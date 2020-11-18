@@ -163,7 +163,7 @@ namespace WebApplication1.Models
         {
             MySqlConnection con = Connect();
             MySqlCommand command = con.CreateCommand();
-            command.CommandText = "INSERT INTO Apuestas(Email_Usuario, ID_Mercado, Tipo, Cuota, Dinero_apostado,Fecha) VALUES ('" + a.Email_Usuario + "','" + a.ID_Mercado + "','" + a.Tipo + "','" + a.Cuota + "','" + a.Dinero_Apostado + "','" + a.Fecha + "');";
+            command.CommandText = "INSERT INTO Apuestas(Email_Usuario, ID_Mercado, Tipo, Cuota, Dinero_apostado,Fecha) VALUES ('" + a.Email_Usuario + "','" + a.ID_Mercado + "','" + a.Tipo + "','" + a.Cuota + "','" + a.Dinero_Apostado + "','" + a.Fecha.ToString("yyyy-MM-dd") + "');";
             Debug.WriteLine("comando" + command.CommandText);
             try
             {
